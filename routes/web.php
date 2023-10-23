@@ -19,3 +19,7 @@ Route::get('/', function () {
 
 use App\Http\Controllers\HomeController;
 Route::get('/home', [HomeController::class, 'index']);
+
+
+use App\Http\Controllers\HelloController;
+Route::get('/hello/{name?}', [HelloController::class, 'index'])->name('hello.index');
